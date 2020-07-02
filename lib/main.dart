@@ -1,4 +1,5 @@
 import 'package:firstanimation/loader.dart';
+import 'package:firstanimation/radialAnimationWithRotation.dart';
 import 'package:firstanimation/radialanimation.dart';
 import 'package:flutter/material.dart';
 
@@ -30,25 +31,81 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Colors.blueAccent,
       body: SingleChildScrollView(
         child: Container(
-          
           padding: const EdgeInsets.all(8.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                buildAnimationWithCurve("easeIn", Loader(curve: Curves.easeIn,)),
-                buildAnimationWithCurve("bounceIn", Loader(curve: Curves.bounceIn,)),
-                buildAnimationWithCurve("ease", Loader(curve: Curves.ease,)),
-                buildAnimationWithCurve("easeOut", Loader(curve: Curves.easeOut,)),
-                buildAnimationWithCurve("easeOutCirc", Loader(curve: Curves.easeOutCirc,)),
-                buildAnimationWithCurve("slowMiddle", Loader(curve: Curves.slowMiddle,)),
-                buildAnimationWithCurve("decelerate", Loader(curve: Curves.decelerate,)),
-                buildAnimationWithCurve("easeOutBack", Loader(curve: Curves.easeOutBack,)),
-                buildAnimationWithCurve("elasticOut", RadialMenu(curve: Curves.elasticOut,)),
-                buildAnimationWithCurve("easeInCubic", RadialMenu(curve: Curves.easeInCubic,)),
-                buildAnimationWithCurve("linear", RadialMenu(curve: Curves.linear,)),
-                buildAnimationWithCurve("linearToEaseOut", RadialMenu(curve: Curves.linearToEaseOut,)),
-                buildAnimationWithCurve("easeInOutSine", RadialMenu(curve: Curves.easeInOutSine,)),
+                SizedBox(
+                  height: 100,
+                ),
+                buildAnimationWithCurve("easeInOut",
+                    RadialMenuWithRotaion(curve: Curves.easeInOut)),
+                buildAnimationWithCurve(
+                    "easeIn",
+                    Loader(
+                      curve: Curves.easeIn,
+                    )),
+                buildAnimationWithCurve(
+                    "bounceIn",
+                    Loader(
+                      curve: Curves.bounceIn,
+                    )),
+                buildAnimationWithCurve(
+                    "ease",
+                    Loader(
+                      curve: Curves.ease,
+                    )),
+                buildAnimationWithCurve(
+                    "easeOut",
+                    Loader(
+                      curve: Curves.easeOut,
+                    )),
+                buildAnimationWithCurve(
+                    "easeOutCirc",
+                    Loader(
+                      curve: Curves.easeOutCirc,
+                    )),
+                buildAnimationWithCurve(
+                    "slowMiddle",
+                    Loader(
+                      curve: Curves.slowMiddle,
+                    )),
+                buildAnimationWithCurve(
+                    "decelerate",
+                    Loader(
+                      curve: Curves.decelerate,
+                    )),
+                buildAnimationWithCurve(
+                    "easeOutBack",
+                    Loader(
+                      curve: Curves.easeOutBack,
+                    )),
+                buildAnimationWithCurve(
+                    "elasticOut",
+                    RadialMenu(
+                      curve: Curves.elasticOut,
+                    )),
+                buildAnimationWithCurve(
+                    "easeInCubic",
+                    RadialMenu(
+                      curve: Curves.easeInCubic,
+                    )),
+                buildAnimationWithCurve(
+                    "linear",
+                    RadialMenu(
+                      curve: Curves.linear,
+                    )),
+                buildAnimationWithCurve(
+                    "linearToEaseOut",
+                    RadialMenu(
+                      curve: Curves.linearToEaseOut,
+                    )),
+                buildAnimationWithCurve(
+                    "easeInOutSine",
+                    RadialMenu(
+                      curve: Curves.easeInOutSine,
+                    )),
               ],
             ),
           ),
