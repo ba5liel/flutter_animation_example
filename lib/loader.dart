@@ -19,6 +19,11 @@ class _LoaderState extends State<Loader> with SingleTickerProviderStateMixin {
     animation.addListener(() {
       setState(() {});
     });
+    rotate = Tween<double>(begin: -90, end: -93)
+            .animate(CurvedAnimation(parent: controller, curve: Curves.ease)),
+        translate = Tween<double>(
+                begin: 0, end: 250.0 - (listOfControllers.length * 10))
+            .animate(CurvedAnimation(parent: controller, curve: Curves.ease)),
     animation.addStatusListener((status) {});
     controller.repeat();
   }
